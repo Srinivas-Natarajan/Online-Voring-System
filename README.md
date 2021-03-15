@@ -15,20 +15,23 @@ This online voting/polling system seeks to address the above issues. It should b
 ![Login](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Login.png?raw=true)
 
 ## 3. Sign up Module
-![Patients](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Signup.png?raw=true)
+![Sign Up](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Sign_Up.png?raw=true)
 
 ## 4. Add Candidate Module
-![Settings](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Add_Candidate.png?raw=true)
+![Add Candidate](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Add_Candidate.png?raw=true)
 
 ## 5. Authorize Candidate Module
-![Settings](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Authorize_Candidate.png?raw=true)
+![Authorize](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Authorize_Candidate.png?raw=true)
 
 ## 6. Vote Page
-![Settings](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Vote_Page.png?raw=true)
+![Vote](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Vote_Page.png?raw=true)
+
+## 7. Email Confirmation
+![Email](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/Email_Confirm.png?raw=true)
 
 ## Relevant Diagrams <br/>
 ### 1. Work Breakdown Structure
-![Activity](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/WBS.png?raw=true)
+![WBS](https://github.com/Srinivas-Natarajan/Online-Voting-System/blob/main/Screenshots/WBS.png?raw=true)
 
 
 
