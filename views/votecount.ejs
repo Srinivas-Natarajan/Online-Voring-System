@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>ONLINE VOTING</title>
+		<link 	rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link 	rel="stylesheet" type="text/css"  href="/stylesheets/app.css">
+	</head>
+	<body>
+		<div class="ui fixed inverted menu">
+			<div class=" ui container">
+				<div class="header item"><i class="code icon"> </i>ADMINISTRATOR PAGE</div>
+			    <a href="/admin/new" class="item">ADD CANDIDATES</a>
+				<a href="/indexvoter" class="item">VOTER INDEX</a>
+				<a href="/logout" class="item">LOGOUT</a>
+			</div>
+		</div>
+		<% candidates.forEach(function(candidate){ %>	
+		<br>
+		<br>
+		<div style="width:30% ;margin:25px auto">
+		<div class="ui card">
+    			<img src="<%= candidate.cimage %>" height="160" >
+  			<div class="content">
+    			<a class="header"><%=candidate.cname%></a>
+    			<div class="meta">
+      				<span class="date"><%=candidate.cparty%></span>
+    			</div>
+  			</div>
+  			<div class="extra content">
+    			<a>
+      				<i class="user icon"></i>
+      				<%=candidate.ccount%> Votes
+    			</a>
+ 	 		</div>
+  			<div class="ui bottom attached progress">
+    			<div class="bar"></div>
+  			</div>	
+		</div>
+		</div>
+		<%});%>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>ONLINE VOTING</title>
+		<link 	rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link 	rel="stylesheet" type="text/css"  href="/stylesheets/app.css">
+		</head>
+	<body>
+		<br>
+		<br>
+		<div style="width:50% ;margin:25px auto">
+		<div class="ui info message">
+  			<div class="header">
+    			Confirmation Page!
+  			</div>
+  			<ul class="list">
+    			<li>Duplication of vote strictly prohibited</li>
+    			<li>Make sure you are voting for the first time</li>
+  			</ul>
+		</div>
+		</div>
+		<div class="ui main text container segment">
+				<div class = "ui top attached segment" >
+		    		<div class = "item">
+						<div class="content">
+							<h3><%=candidate.cname%></h3>
+						</div>
+						<img class = "ui centered rounded image" width="300" height="181" src= "<%= candidate.cimage %>">
+						<div class="content">
+							<%=candidate.cparty%>
+							<span></span>
+						</div>
+						<div class = "description">
+							<p>
+								<%- candidate.cinfo %>
+							</p>
+						</div>
+						<form action="/voter/<%= candidate._id %>" method="POST" >
+							<button  class="ui red basic button">Confirm</button>
+						</form>
+					</div>
+				</div>
+			</div>	
+	</body>
+</html>

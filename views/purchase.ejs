@@ -1,0 +1,56 @@
+<% include partials/header %>
+
+<div class="ui container" style= "margin-top:6em">
+	<div class="text-center">
+		<div class="page-header"><h1>Add your Medicines to CART</h1></div>
+	</div>
+	<table class="ui red celled table">
+		<thead >
+			<tr>
+				<th >Medicine Name    </th>
+          		<th>Manufacture Date</th>
+          		<th>Expiry Date</th>
+          		<th>Price</th>
+          		<!-- <th>Pieces</th> -->
+      			<th></th>
+        	</tr>
+		</thead>
+		<tbody>
+			
+			<tr><%  medicines.forEach(function(Medicine){ %></tr>
+			
+			<tr>
+				
+				<td><%= Medicine.name %></td>
+				<td><%=Medicine.mfd %></td>
+        		<td><%=Medicine.exp %></td>
+        		<td><%=Medicine.price %></td>
+				<!-- <td >
+					<select  class="ui fluid dropdown" id="inputState"  name="pieces" >
+						<option class="default text">0</option>
+						<option >1</option>
+        				<option >2</option>
+        				<option >3</option>
+					</select>
+				</td> -->
+				<td class = "center aligned">
+					
+				<form action="/purchase/<%= Medicine._id %>" method="POST" >
+					<button  class="ui red basic button">Add</button>
+				</form>
+				</td> 
+					
+				
+				<% }) %> 
+			
+			</tr>
+			
+		</tbody>
+	</table>
+	<div class="ui center aligned container">
+		<button class="ui teal basic button"><a href="/landing/user">Back</a></button>
+		<button class="ui teal basic button"><a href="/cart">View Cart</a></button>
+	</div>
+</div>
+
+<% include partials/footer %>

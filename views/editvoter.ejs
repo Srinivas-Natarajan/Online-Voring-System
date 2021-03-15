@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>ONLINE VOTING</title>
+		<link 	rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link 	rel="stylesheet" type="text/css"  href="/stylesheets/app.css">
+	</head>
+	<body>
+		<div class="ui fixed inverted menu">
+			<div class=" ui container">
+				<div class="header item"><i class="code icon"> </i>ADMINISTRATOR PAGE</div>
+			    <a href="/admin/new" class="item">ADD CANDIDATES</a>
+				<a href="/indexvoter" class="item">VOTER INDEX</a>
+				<a href="/logout" class="item">LOGOUT</a>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<div style="width:30% ;margin:25px auto">
+		<div class="ui success message">
+  		<div class="header">
+    		Press confirm to authorize!
+  		</div>
+  		</div>
+		</div>
+		<div class="ui main text container segment">
+			<form class="ui form"  action = "/voterindex/<%=voter._id%>?_method=PUT" method="POST">
+		<div class="field">
+			<label>Username</label>
+			<input type="text" name="voter[username]" value="<%=voter.username%>">
+		</div>
+		<div class="field">
+			<label>Adhaar</label>
+			<input type="text" name="voter[adhaar]" value="<%=voter.adhaar%>">
+		</div>
+		<button class = "ui green basic button">Confirm</button>
+	</form>
+</div>
+</body>
+</html>

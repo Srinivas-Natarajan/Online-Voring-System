@@ -1,0 +1,47 @@
+<html lang="en">
+	<head>
+		<title>ONLINE VOTING</title>
+		<link 	rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link 	rel="stylesheet" type="text/css"  href="/stylesheets/app.css">
+	</head>
+	<body>
+		<div class="ui fixed inverted menu">
+			<div class=" ui container">
+				<div class="header item"><i class="code icon"> </i>ADMINISTRATOR PAGE</div>
+			    <a href="/admin/new" class="item">ADD CANDIDATES</a>
+				<a href="/votecount" class="item">VOTE COUNT</a>
+				<a href="/logout" class="item">LOGOUT</a>
+			</div>
+		</div>
+		<%voters.forEach(function(voter){%>
+		<br/>
+		<div class="ui main text container segment">
+			<div class = "ui top attached segment" >
+		         <div class = "item">
+					<div class = "content">
+		        		<h3><%=voter.username%></h3>
+					 </div>
+					 <div class = "content">
+						<h3><%=voter.email%></h3>
+					 </div>
+					 <div class = "content">
+						<h3><%=voter.phoneno%></h3>
+					 </div>
+					 <div class = "content">
+						<h3><%=voter.adhaar%></h3>	
+					 </div>
+					 <div class = "content">
+						<span><%=voter.created%> </span>
+					 </div>
+					 <a class="ui positive basic button" href="/voterindex/<%=voter._id%>/edit">AUTHORIZE</a>
+					<form  id="delete" action="/voterindex/<%=voter._id%>?_method=DELETE" method="POST">
+					<button class="ui negative basic button" id="delete">
+						REMOVE
+					</button>
+					</form>
+	    </div>
+			</div>
+		</div>
+        <%});%>
+</body>
+</html>

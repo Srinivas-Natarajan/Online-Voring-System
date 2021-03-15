@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>ONLINE VOTING</title>
+		<link 	rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link 	rel="stylesheet" type="text/css"  href="/stylesheets/app.css">
+	</head>
+	<body>
+		<div class="ui fixed inverted menu">
+			<div class=" ui container">
+				<div class="header item"><i class="code icon"> </i>ADMINISTRATOR PAGE</div>
+			    <a href="/admin/new" class="item">ADD CANDIDATES</a>
+				<a href="/indexvoter" class="item">VOTER INDEX</a>
+				<a href="/votecount" class="item">VOTE COUNT</a>
+				<a href="/logout" class="item">LOGOUT</a>
+			</div>
+		</div>
+<br/>
+<br/>
+<br/>
+<div class="ui main text container segment">
+	<div class="ui huge header">
+		New Candidate
+	</div>
+	<form class="ui form" action = "/admin" method="POST">
+		<div class="field">
+			<label>Candidate Name</label>
+			<input type="text" name="admin[cname]" placeholder="Name">
+		</div>
+		<div class="field">
+			<label>Candidate Age</label>
+			<input type="Number" name="admin[cage]" placeholder="age">
+		</div>
+		<div class="field">
+			<label>Party name</label>
+			<input type="text" name="admin[cparty]" placeholder="party name">
+		</div>
+		<div class="field">
+			<label>Vote count</label>
+			<input type="Number" name="admin[ccount]" placeholder="Enter default vaue 0" value=0  disabled="disabled">
+		</div>
+		<div class="field">
+			<label>Candidate Information</label>
+			<textarea name="admin[cinfo]"></textarea>
+		</div>
+		<div class="field">
+			<label>Candidate Photo</label>
+			<input type="text" name="admin[cimage]" placeholder="Candidate photo">	</div>
+		<input class = "ui violet basic button" type="submit">
+	</form>
+</div>
+</body>
+</html>
